@@ -22,7 +22,7 @@ def tsp(cities):
 
     return path
 
-if _name_ = "_main_":
+if _name_ == "_main_":
     path = tsp(sys.argv[1])
     print(path)
 
