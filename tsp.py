@@ -8,6 +8,7 @@ def tsp(cities):
     current_city = 0
     path = [current_city] 
     not_visited_cities = set(range(1,n))
+    length = 0
 
     distance = [[0] * n for i in range(n)] #都市間の距離を記録する行列
     for i in range(n):
@@ -18,7 +19,10 @@ def tsp(cities):
         next_city = min(not_visited_cities,key = lambda city: distance[current_city][city])
         not_visited_cities.remove(next_city)
         path.append(next_city)
+        length += distance[current_city][next_city]
         current_city = next_city
+
+    length += distance[next_city][0]
         
     return path
 
