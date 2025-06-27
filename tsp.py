@@ -1,5 +1,7 @@
 import math
 import sys
+from common import print_tour
+
 
 def tsp(cities):
     n = len(cities)
@@ -27,5 +29,5 @@ if __name__ == "__main__":
             xy = i.split(",")
             cities.append((float(xy[0]),float(xy[1])))
     path = tsp(cities)
-    print(path)
+    print_tour(path)
 
