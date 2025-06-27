@@ -30,8 +30,4 @@ if __name__ == "__main__":
             cities.append((float(xy[0]),float(xy[1])))
     path = tsp(cities)
     print_tour(path)
-    with open(output_file, 'w') as f:
-        f.write("index\n")
-        for city in path:
-            f.write(str(city) + '\n')
-
+    
