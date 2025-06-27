@@ -23,6 +23,7 @@ def tsp(cities):
         current_city = next_city
 
     length += distance[next_city][0]
+    print length
         
     return path
 
